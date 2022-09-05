@@ -1,0 +1,311 @@
+{
+	"compiler": {
+		"version": "0.4.26+commit.4563c3fc"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"name": "identity",
+						"type": "address"
+					}
+				],
+				"name": "isIdentityExist",
+				"outputs": [
+					{
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "getFirstBlockNum",
+				"outputs": [
+					{
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "identity",
+						"type": "address"
+					},
+					{
+						"name": "key",
+						"type": "bytes32"
+					},
+					{
+						"name": "value",
+						"type": "bytes"
+					},
+					{
+						"name": "updated",
+						"type": "int256"
+					}
+				],
+				"name": "setAttribute",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"name": "identity",
+						"type": "address"
+					}
+				],
+				"name": "getLatestRelatedBlock",
+				"outputs": [
+					{
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "identity",
+						"type": "address"
+					},
+					{
+						"name": "key",
+						"type": "bytes32"
+					},
+					{
+						"name": "value",
+						"type": "bytes"
+					},
+					{
+						"name": "updated",
+						"type": "int256"
+					}
+				],
+				"name": "delegateSetAttribute",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "getWeIdCount",
+				"outputs": [
+					{
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "identity",
+						"type": "address"
+					},
+					{
+						"name": "auth",
+						"type": "bytes"
+					},
+					{
+						"name": "created",
+						"type": "bytes"
+					},
+					{
+						"name": "updated",
+						"type": "int256"
+					}
+				],
+				"name": "createWeId",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "identity",
+						"type": "address"
+					},
+					{
+						"name": "auth",
+						"type": "bytes"
+					},
+					{
+						"name": "created",
+						"type": "bytes"
+					},
+					{
+						"name": "updated",
+						"type": "int256"
+					}
+				],
+				"name": "delegateCreateWeId",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "getLatestBlockNum",
+				"outputs": [
+					{
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"name": "currentBlockNum",
+						"type": "uint256"
+					}
+				],
+				"name": "getNextBlockNumByBlockNum",
+				"outputs": [
+					{
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"name": "roleControllerAddress",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"name": "identity",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"name": "key",
+						"type": "bytes32"
+					},
+					{
+						"indexed": false,
+						"name": "value",
+						"type": "bytes"
+					},
+					{
+						"indexed": false,
+						"name": "previousBlock",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"name": "updated",
+						"type": "int256"
+					}
+				],
+				"name": "WeIdAttributeChanged",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"name": "identity",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"name": "previousBlock",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"name": "created",
+						"type": "int256"
+					}
+				],
+				"name": "WeIdHistoryEvent",
+				"type": "event"
+			}
+		],
+		"devdoc": {
+			"methods": {}
+		},
+		"userdoc": {
+			"methods": {}
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/WeIdContract.sol": "WeIdContract"
+		},
+		"evmVersion": "byzantium",
+		"libraries": {},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/RoleController.sol": {
+			"keccak256": "0xd181d2a2cae7253b9f20757851421364b279284594a84e2780ea4dc4907d340b",
+			"urls": [
+				"bzzr://f4e59e45551fba53c071a14f1dedb827975a3b4323cf27fa8a7ff5458a73b9c1"
+			]
+		},
+		"contracts/WeIdContract.sol": {
+			"keccak256": "0x98b92f5d75725fa226b43aacc0229cecb26684a54003ac1a83c94ab2a7326bf3",
+			"urls": [
+				"bzzr://d8307daf5beb3ad4858bcc6a1614a65cba22dafac67f01baf7602a62585a37b9"
+			]
+		}
+	},
+	"version": 1
+}
